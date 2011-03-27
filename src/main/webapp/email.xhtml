@@ -1,0 +1,33 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.prime.com.tr/ui"
+	template="/template/template.xhtml">
+	
+	<ui:define name="body">
+	
+		<p:panel header="Mensagem">
+		
+			<h:outputLabel value="Título" />
+			<br clear="all" />
+			<h:inputText value="#{mensagem.titulo}" />
+			
+			<br clear="all" />
+			<br clear="all" />
+			
+			<h:outputLabel value="Corpo:" />
+			<br clear="all" />
+			<h:inputTextarea value="#{mensagem.assunto}"  /> 
+			
+			
+			<br clear="all" />
+			<br clear="all" />
+			
+			<h:commandButton action="#{emailController.enviarEmail(mensagem)}" value="Enviar!" />
+			<h:commandButton value="Voltar" action="home.jsf?faces-redirect=true"  immediate="true"/>			
+		
+		</p:panel>
+		
+	</ui:define>
+	
+</ui:composition>

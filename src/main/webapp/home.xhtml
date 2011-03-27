@@ -1,0 +1,31 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.prime.com.tr/ui"
+	template="/template/template.xhtml">
+	
+	<ui:define name="body">
+	
+		<p:panel header="Mensagem">
+		
+			<h:outputLabel value="From:" />
+			<br clear="all" />
+			<h:inputText value="#{mensagem.de}" />
+			
+			<br clear="all" />
+			<br clear="all" />
+			
+			<h:outputLabel value="To:" />
+			<br clear="all" />
+			<h:inputText value="#{mensagem.para}" />
+			
+			<br clear="all" />
+			<br clear="all" />
+			
+			<h:commandButton action="#{emailController.prepararParaEnvioDeEmail(mensagem)}" value="Próximo passo" />			
+		
+		</p:panel>
+		
+	</ui:define>
+	
+</ui:composition>

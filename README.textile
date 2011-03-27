@@ -1,0 +1,33 @@
+h1. Sobre
+
+Aplicação desenvolvida durante o treinamento sobre CDI na E-novar Soluções Tecnológicas
+
+h2. Antes de subir a aplicação
+
+Este projeto usa a fluent-mail-api do Guilherme Chapiewski (http://github.com/guilhermechapiewski/fluent-mail-api), 
+como não encontrei sua dependência em nenhum repositório maven, o que fiz foi criar a árvore de diretórios com/guilhermechapiewski/fluent-mail-api/1.0.1 dentro do repositório local ( na pasta .m2/repository).  
+Em seguida coloquei o jar da fluent-mail-api e adicionei o seguinte arquivo chamado fluent-mail-api.pom dentro da pasta 1.0.1 :
+
+<pre>
+
+	<?xml version="1.0" encoding="UTF-8"?>
+	<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  		<modelVersion>4.0.0</modelVersion>
+  		<groupId>com.guilhermechapiewski</groupId>
+  		<artifactId>fluent-mail-api</artifactId>
+  		<version>1.0.1</version>
+	
+  		<dependencies>
+
+			<dependency>
+				<groupId>javax.mail</groupId>
+				<artifactId>mail</artifactId>
+				<version>1.4.4</version>
+			</dependency>
+		
+		</dependencies>
+
+	</project>
+
+</pre>
