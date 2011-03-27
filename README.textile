@@ -6,7 +6,7 @@ h2. Antes de subir a aplicação
 
 Este projeto usa a fluent-mail-api do Guilherme Chapiewski (http://github.com/guilhermechapiewski/fluent-mail-api), 
 como não encontrei sua dependência em nenhum repositório maven, o que fiz foi criar a árvore de diretórios com/guilhermechapiewski/fluent-mail-api/1.0.1 dentro do repositório local ( na pasta .m2/repository).  
-Em seguida coloquei o jar da fluent-mail-api e adicionei o seguinte arquivo chamado fluent-mail-api.pom dentro da pasta 1.0.1 :
+Em seguida coloquei o jar da fluent-mail-api e adicionei o seguinte arquivo chamado fluent-mail-api-1.0.1.pom dentro da pasta 1.0.1 :
 
 <pre>
 
